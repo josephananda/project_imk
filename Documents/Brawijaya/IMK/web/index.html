@@ -80,7 +80,9 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="Swal.fire('Registered Succesfully'); $('#exampleModal').modal('hide')">Sign Up</button>
+                <button type="button" class="btn btn-primary" onclick="Swal.fire('Registered Succesfully'); $('#exampleModal').modal('hide')">
+                    Sign Up
+                </button>
               </div>
             </div>
           </div>
@@ -94,16 +96,18 @@
             </a>
             <div class="dropdown-menu" style="right: 0; left: auto;" aria-labelledby="navbarDropdown">
               <div class="container">
-                <form>
+                <form action="assets_dashboard/dashboard.html">
                   <div class="form-group flex-column align-items-start">
+                    <label for="exampleFormControlInput1">Log In</label>
+                    <hr>
                     <label for="exampleFormControlInput1">Email address</label>
                     <input type="email" class="form-control mb-3" style="width: 200px;" id="exampleFormControlInput1" placeholder="name@example.com">
                     <label for="exampleFormControlInput1">Email address</label>
                     <input type="email" class="form-control mb-3" style="width: 200px;" id="exampleFormControlInput1" placeholder="name@example.com">
-                    <button type="button" class="btn btn-primary mb-3" style="width: 200px;">Primary</button>
+                    <button type="submit" class="btn btn-primary mb-3" style="width: 200px;">Primary</button>
                     <div class="btn-group" role="group" aria-label="Basic example" style="width: 200px;">
-                      <button type="button" class="btn btn-primary">Facebook</button>
-                      <button type="button" class="btn btn-danger">Google</button>
+                      <button type="submit" class="btn btn-primary">Facebook</button>
+                      <button type="submit" class="btn btn-danger">Google</button>
                     </div>
                   </div>
                 </form>
