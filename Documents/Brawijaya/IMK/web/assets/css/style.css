@@ -1,0 +1,26 @@
+.font01{
+    font-family: Nunito !important;
+}
+
+.font02{
+    font-family: Nunito !important;
+    font-weight: 700 !important;
+}
+
+.footerfont01{
+    font-size: 12.8px !important;
+    line-height: 12.8px !important;
+}
+
+.btn01{
+    height: 38px !important;
+}
+
+.navbar-brand{
+    font-family: Nunito !important;
+    font-weight: 800 !important;
+}
+
+.bg-primary{
+    background-color: #4e73df !important;
+}
