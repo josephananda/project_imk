@@ -1,3 +1,19 @@
+.carousel{
+    width: 100% !important;
+    height: 100% !important;
+    justify-content: center;
+}
+
+.carousel img{
+    height: auto !important;
+}
+
+.card{
+    width: 100% !important;
+    margin: auto auto !important;
+    justify-content: center !important;
+}
+
 .font01{
     font-family: Nunito !important;
 }
