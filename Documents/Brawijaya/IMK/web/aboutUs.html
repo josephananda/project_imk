@@ -12,11 +12,11 @@
   <title>Wizland - Manage your financial easily</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -29,7 +29,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
         <div class="sidebar-brand-icon">
           <i class="far fa-money-bill-alt"></i>
         </div>
@@ -72,19 +72,10 @@
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" role="button" data-toggle="modal" data-target="#invoiceModal">
           <i class="fas fa-fw fa-file-invoice-dollar"></i>
-          <span>Invoice</span>
+          <span>Add Invoice</span>
         </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
-          </div>
-        </div>
       </li>
 
       <!-- Divider -->
@@ -92,8 +83,15 @@
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Addons
+        Others
       </div>
+
+      <!-- Nav Item - Charts -->
+      <li class="nav-item">
+        <a class="nav-link" href="aboutUs.html">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>About Us</span></a>
+      </li>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
@@ -252,7 +250,7 @@
                 </h6>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                   <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="img/ferry.jpg" alt="">
+                    <img class="rounded-circle" src="assets/img/ferry.jpg" alt="">
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div class="font-weight-bold">
@@ -262,7 +260,7 @@
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                   <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="img/bibin.jpg" alt="">
+                    <img class="rounded-circle" src="assets/img/bibin.jpg" alt="">
                     <div class="status-indicator"></div>
                   </div>
                   <div>
@@ -272,7 +270,7 @@
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                   <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="img/harun.jpg" alt="">
+                    <img class="rounded-circle" src="assets/img/harun.jpg" alt="">
                     <div class="status-indicator bg-warning"></div>
                   </div>
                   <div>
@@ -282,7 +280,7 @@
                 </a>
                 <a class="dropdown-item d-flex align-items-center" href="#">
                   <div class="dropdown-list-image mr-3">
-                    <img class="rounded-circle" src="img/reza.jpg" alt="">
+                    <img class="rounded-circle" src="assets/img/reza.jpg" alt="">
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div>
@@ -300,7 +298,7 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Joseph Ananda</span>
-                <img class="img-profile rounded-circle" src="img/joseph.jpg">
+                <img class="img-profile rounded-circle" src="assets/img/joseph.jpg">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -324,6 +322,82 @@
               </div>
             </li>
 
+        <div class="modal fade" id="invoiceModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Invoice</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <form>
+                    <div class="form-group row mb-3">
+                      <label for="inputTanggal" class="col-sm-3 col-form-label">Tanggal</label>
+                      <div class="col-sm-9">
+                        <input type="date" class="form-control" id="inputTanggal" placeholder="Tanggal Transaksi" required>
+                      </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                      <label for="inputJenisTransaksi" class="col-sm-3 col-form-label">Transaksi</label>
+                      <div class="col-sm-9">
+                      <select id = "jenisTransaksi" class="form-control">
+                        <option value = "1">Penjualan (Tunai)</option>
+                        <option value = "2">Penjualan (Kredit)</option>
+                        <option value = "3">Hutang</option>
+                        <option value = "4">Piutang</option>
+                        <option value = "5">Pembayaran</option>
+                        <option value = "6">Pembelian</option>
+                        <option value = "7">Penyusutan</option>
+                        <option value = "8">Investasi</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                      <label for="inputJumlah" class="col-sm-3 col-form-label">Jumlah</label>
+                      <div class="col-sm-9">
+                        <input type="number" class="form-control" id="inputJumlah" placeholder="Jumlah Barang" required>
+                      </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                      <label for="inputNominal" class="col-sm-3 col-form-label">Nominal</label>
+                      <div class="col-sm-9">
+                        <input type="number" class="form-control" id="inputNominal" placeholder="Harga per Satuan" required>
+                      </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                      <label for="inputTotal" class="col-sm-3 col-form-label">Total</label>
+                      <div class="col-sm-9">
+                        <input type="number" class="form-control" id="inputTotal" placeholder="Total" required>
+                      </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                      <label for="inputGambar" class="col-sm-3 col-form-label">Gambar</label>
+                      <div class="col-sm-9">
+                        <input type="file" class="form-control d-sm-inline-block btn-sm" id="inputGambar" placeholder="" accept="image/png, image/jpeg">
+                      </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                      <label for="inputKeterangan" class="col-sm-3 col-form-label">Keterangan</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" id="inputKeterangan" placeholder="Tambah Keterangan">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="Swal.fire('Added Succesfully'); $('#exampleModal').modal('hide')">
+                    Add Invoice
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
           </ul>
 
         </nav>
@@ -332,25 +406,27 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Heading -->
+        <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Analytics Overview</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" onclick="Swal.fire('File is downloaded now'); $('#exampleModal').modal('hide')"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+            <h3 class="mb-0 text-gray-800">Wizland Developer Team</h3>
+          </div>
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h5 class="mb-0 text-gray-800">Here are the great guys behind the design of this web</h5>
           </div>
 
           <!-- Content Row -->
           <div class="row">
 
-            <!-- Balance Card -->
+            <!-- Member Card -->
             <div class="col-xl-4 col-md-4 mb-4">
               <div class="card border-left-primary shadow h-100">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h5 class="m-0 font-weight-bold text-primary">Balance</h5>
+                  <h5 class="m-0 font-weight-bold text-primary">Ferry Ardianto R.</h5>
                 </div>
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="h4 font-weight-bold text-gray-800 mb-1 text-center">Rp 1.000.000</div>
+                      <img src="assets/img/ferry.jpg" width="75%" class="rounded mx-auto d-block" alt="">
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-rupe fa-2x text-primary"></i>
@@ -360,142 +436,100 @@
               </div>
             </div>
 
-            <!-- Profit Card -->
+            <!-- Member Card -->
             <div class="col-xl-4 col-md-4 mb-4">
               <div class="card border-left-success shadow h-100">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h5 class="m-0 font-weight-bold text-success">Profit</h5>
+                  <h5 class="m-0 font-weight-bold text-success">Joseph Ananda S.</h5>
                 </div>
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="h4 font-weight-bold text-gray-800 mb-1 text-center">Rp 100.000</div>
-                      <div class="h5 mb-0 font-weight-bold text-success text-center">10%</div>
+                      <img src="assets/img/joseph.jpg" width="75%" class="rounded mx-auto d-block" alt="">
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-arrow-circle-up fa-2x text-success"></i>
+                      <i class="fas fa-rupe fa-2x text-primary"></i>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Current Market Price Card -->
+            <!-- Member Card -->
             <div class="col-xl-4 col-md-4 mb-4">
               <div class="card border-left-warning shadow h-100">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h5 class="m-0 font-weight-bold text-warning">Current Market Price</h5>
+                  <h5 class="m-0 font-weight-bold text-warning">Harun Ulum F.</h5>
                 </div>
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="h4 font-weight-bold text-gray-800 mb-1 text-center">Rp 1.715.000</div>
-                      <div class="h5 mb-0 font-weight-bold text-danger text-center">10%</div>
+                      <img src="assets/img/harun.jpg" width="75%" class="rounded mx-auto d-block" alt="">
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-arrow-circle-up fa-2x text-danger"></i>
+                      <i class="fas fa-rupe fa-2x text-primary"></i>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Content Row -->
-
-          <div class="row">
-
-            <!-- Area Chart -->
-            <div class="col-xl-8 col-lg-7">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
+            <!-- Member Card -->
+            <div class="col-xl-4 col-md-4 mb-4">
+              <div class="card border-left-danger shadow h-100">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h5 class="m-0 font-weight-bold text-primary">Transactions Overview</h5>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
+                  <h5 class="m-0 font-weight-bold text-danger">Reza Syahputra</h5>
                 </div>
-                <!-- Card Body -->
                 <div class="card-body">
-                  <div class="chart-bar">
-                    <canvas id="myBarChart"></canvas>
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <img src="assets/img/reza.jpg" width="75%" class="rounded mx-auto d-block" alt="">
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-rupe fa-2x text-primary"></i>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Pie Chart -->
-            <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
+            <!-- Member Card -->
+            <div class="col-xl-4 col-md-4 mb-4">
+              <div class="card border-left-info shadow h-100">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h5 class="m-0 font-weight-bold text-primary">Details</h5>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
+                  <h5 class="m-0 font-weight-bold text-info">M. Najmi Faisal</h5>
                 </div>
-                <!-- Card Body -->
                 <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table table-borderless" id="dataTable" width="100%" cellspacing="0">
-                      <thead>
-                        <tr>
-                          <th class="border-right border-bottom">Item</th>
-                          <th class="border-right border-bottom">Qty</th>
-                          <th class="border-right border-bottom">Total</th>
-                          <th class="border-bottom"></th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="border-right">Biji Arabika</td>
-                          <td class="border-right">1 kg</td>
-                          <td class="border-right">160.000</td>
-                          <td class="fas fa-caret-up text-danger pr-1">8%</td>
-                        </tr>
-                        <tr>
-                          <td class="border-right">Biji Robusta</td>
-                          <td class="border-right">1 kg</td>
-                          <td class="border-right">130.000</td>
-                          <td class="fas fa-caret-down text-success">5%</td>
-                        </tr>
-                        <tr>
-                          <td class="border-right">Botol Plastik</td>
-                          <td class="border-right">1.000 buah</td>
-                          <td class="border-right">1.400.000</td>
-                          <td class="fas fa-caret-up text-danger">2%</td>
-                        </tr>
-                        <tr>
-                          <td class="border-right">Sticker</td>
-                          <td class="border-right">5 lbr</td>
-                          <td class="border-right">25.000</td>
-                          <td class="fas fa-minus text-warning"></td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <img src="assets/img/bibin.jpg" width="75%" class="rounded mx-auto d-block" alt="">
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-rupe fa-2x text-primary"></i>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+
+            <!-- Member Card -->
+            <div class="col-xl-4 col-md-4 mb-4">
+              <div class="card border-left-primary shadow h-100">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h5 class="m-0 font-weight-bold text-primary">=== It's Us! ===</h5>
+                </div>
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <img src="assets/img/us.jpg" width="85%" class="rounded mx-auto d-block" alt="">
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-rupe fa-2x text-primary"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
         </div>
         <!-- /.container-fluid -->
@@ -503,63 +537,64 @@
       </div>
       <!-- End of Main Content -->
 
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
+<!-- Footer -->
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
             <span>Copyright &copy; WIZLAND 2019</span>
-          </div>
         </div>
-      </footer>
-      <!-- End of Footer -->
-
     </div>
-    <!-- End of Content Wrapper -->
+</footer>
+<!-- End of Footer -->
 
-  </div>
-  <!-- End of Page Wrapper -->
+</div>
+<!-- End of Content Wrapper -->
 
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
-  </a>
+</a>
 
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="index.html">Logout</a>
+            </div>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="../index.html">Logout</a>
-        </div>
-      </div>
     </div>
-  </div>
+</div>
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Core plugin JavaScript-->
+<script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+<!-- Custom scripts for all pages-->
+<script src="assets/js/sb-admin-2.min.js"></script>
 
-  <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
+<!-- Page level plugins -->
+<script src="assets/vendor/chart.js/Chart.min.js"></script>
 
-  <!-- Page level custom scripts -->
-  <script src="js/demo/chart-bar-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<!-- Page level custom scripts -->
+<script src="assets/js/demo/chart-bar-demo.js"></script>
+<script src="assets/js/demo/chart-pie-demo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 </body>
 
 </html>
