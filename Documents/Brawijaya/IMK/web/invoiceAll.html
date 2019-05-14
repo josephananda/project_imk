@@ -388,142 +388,255 @@
           <!-- Begin Page Content -->
           <div class="container-fluid">
 
-          <!-- Page Heading -->
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-              <h3 class="mb-0 text-gray-800">Wizland Developer Team</h3>
-              <a href="assets/img/wizland-members.jpg" download
-              class="d-none d-sm-inline-block btn btn-sm bg-navy shadow-sm text-white" onclick="Swal.fire('File is downloaded now'); $('#exampleModal').modal('hide')">
-              <i class="fas fa-download fa-sm text-white"></i> Download Wizland Members List</a>
+            <!-- Page Heading -->
+            <h1 class="h3 mb-2 text-gray-800">All Invoices</h1>
+            <p class="mb-4">Here are shown the complete list of the Invoices.</p>
+
+            <!-- DataTables -->
+            <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-navy">List of Invoices</h6>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th>Reference Number</th>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Total</th>
+                      </tr>
+                    </thead>
+                    <tfoot>
+                      <tr>
+                        <th>Reference Number</th>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Total</th>
+                      </tr>
+                    </tfoot>
+                    <tbody>
+                      <tr>
+                        <td>1998234523573246</td>
+                        <td>Botol Plastik</td>
+                        <td>1000 Pcs</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/04/24</td>
+                        <td>Rp 100.000</td>
+                      </tr>
+                      <tr>
+                        <td>1997185907148675</td>
+                        <td>Biji Robusta Java Mocca</td>
+                        <td>1 Kg</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/04/20</td>
+                        <td>Rp 130.000</td>
+                      </tr>
+                      <tr>
+                        <td>1996104812512348</td>
+                        <td>Sticker</td>
+                        <td>10 Sheets</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/03/30</td>
+                        <td>Rp 100.000</td>
+                      </tr>
+                      <tr>
+                        <td>1995987123591273</td>
+                        <td>Biji Arabika Java Trawas</td>
+                        <td>1 Kg</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/03/24</td>
+                        <td>Rp 160.000</td>
+                      </tr>
+                      <tr>
+                        <td>1994972385298375</td>
+                        <td>Box Styrofoam</td>
+                        <td>1 Pcs</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/03/19</td>
+                        <td>Rp 100.000</td>
+                      </tr>
+                      <tr>
+                        <td>1993901847285825</td>
+                        <td>Es Batu Balok</td>
+                        <td>1 Kg</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/03/15</td>
+                        <td>Rp 110.000</td>
+                      </tr>
+                      <tr>
+                        <td>1992987123489904</td>
+                        <td>Botol Plastik</td>
+                        <td>500 Pcs</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/03/12</td>
+                        <td>Rp 500.000</td>
+                      </tr>
+                      <tr>
+                        <td>1991987598832450</td>
+                        <td>Biji Arabika Aceh Gayo</td>
+                        <td>2 Kg</td>
+                        <td class="text-success">Sales</td>
+                        <td>2019/03/09</td>
+                        <td>Rp 420.000</td>
+                      </tr>
+                      <tr>
+                        <td>1990249817223582</td>
+                        <td>Biji Robusta Toraja</td>
+                        <td>3 Kg</td>
+                        <td class="text-success">Sales</td>
+                        <td>2019/03/05</td>
+                        <td>Rp 150.000</td>
+                      </tr>
+                      <tr>
+                        <td>1989127324481912</td>
+                        <td>Sticker</td>
+                        <td>50 Sheets</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/03/03</td>
+                        <td>Rp 500.000</td>
+                      </tr>
+                      <tr>
+                        <td>1988238759283579</td>
+                        <td>Es Batu Balok</td>
+                        <td>10 Kg</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/03/01</td>
+                        <td>Rp 1.100.000</td>
+                      </tr>
+                      <tr>
+                        <td>1987132487590023</td>
+                        <td>Susu Kental Manis</td>
+                        <td>5 Cans</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/02/27</td>
+                        <td>Rp 55.000</td>
+                      </tr>
+                      <tr>
+                        <td>1986121872349735</td>
+                        <td>Biji Arabika Kerinci Jambi</td>
+                        <td>4 Kg</td>
+                        <td class="text-success">Sales</td>
+                        <td>2019/02/23</td>
+                        <td>Rp 840.000</td>
+                      </tr>
+                      <tr>
+                        <td>1985234872358932</td>
+                        <td>Sticker</td>
+                        <td>20 Sheets</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/02/20</td>
+                        <td>Rp 200.000</td>
+                      </tr>
+                      <tr>
+                        <td>1984349823925231</td>
+                        <td>Biji Robusta Lampung</td>
+                        <td>2 Kg</td>
+                        <td class="text-success">Sales</td>
+                        <td>2019/02/18</td>
+                        <td>Rp 280.000</td>
+                      </tr>
+                      <tr>
+                        <td>1983234095023903</td>
+                        <td>Botol Plastik</td>
+                        <td>250 Pcs</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/02/15</td>
+                        <td>$198,500</td>
+                      </tr>
+                      <tr>
+                        <td>1982345093292348</td>
+                        <td>Listrik Bulanan</td>
+                        <td>300kW</td>
+                        <td class="text-danger">Payment</td>
+                        <td>2019/02/12</td>
+                        <td>Rp 300.000</td>
+                      </tr>
+                      <tr>
+                        <td>1981045412398735</td>
+                        <td>Biji Arabika Bali Kintamani</td>
+                        <td>5 Kg</td>
+                        <td class="text-success">Sales</td>
+                        <td>2019/02/10</td>
+                        <td>Rp 1.050.000</td>
+                      </tr>
+                      <tr>
+                        <td>1980348230405723</td>
+                        <td>Es Batu Balok</td>
+                        <td>4 Kg</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/02/05</td>
+                        <td>Rp 440.000</td>
+                      </tr>
+                      <tr>
+                        <td>1979439032582010</td>
+                        <td>Biji Arabika Flores Manggarai</td>
+                        <td>4 Kg</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/02/02</td>
+                        <td>Rp 820.000</td>
+                      </tr>
+                      <tr>
+                        <td>1978342309181283</td>
+                        <td>Biji Robusta High Land</td>
+                        <td>3 Kg</td>
+                        <td class="text-success">Sales</td>
+                        <td>2019/01/28</td>
+                        <td>Rp 480.000</td>
+                      </tr>
+                      <tr>
+                        <td>1977091235712392</td>
+                        <td>Susu Kental Manis</td>
+                        <td>6 Cans</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/01/22</td>
+                        <td>Rp 66.000</td>
+                      </tr>
+                      <tr>
+                        <td>1976093487237819</td>
+                        <td>Sticker</td>
+                        <td>20 Sheets</td>
+                        <td class="text-danger">Restock</td>
+                        <td>2019/01/15</td>
+                        <td>Rp 200.000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-              <h5 class="mb-0 text-gray-800">Here are the great guys behind the design of this web</h5>
-            </div>
 
-            <!-- Content Row -->
-            <div class="row">
-
-              <!-- Member Card 1 -->
-              <div class="col-xl-4 col-md-4 mb-4">
-                <div class="card border-left-seagreen shadow h-100">
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h5 class="m-0 font-weight-bold text-blue">Ferry Ardianto R.</h5>
-                  </div>
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <img src="assets/img/ferry.jpg" width="75%" class="rounded mx-auto d-block" alt="">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Member Card 2 -->
-              <div class="col-xl-4 col-md-4 mb-4">
-                <div class="card border-left-seagreen shadow h-100">
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h5 class="m-0 font-weight-bold text-blue">Joseph Ananda S.</h5>
-                  </div>
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <img src="assets/img/joseph.jpg" width="75%" class="rounded mx-auto d-block" alt="">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Member Card 3 -->
-              <div class="col-xl-4 col-md-4 mb-4">
-                <div class="card border-left-seagreen shadow h-100">
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h5 class="m-0 font-weight-bold text-blue">Harun Ulum F.</h5>
-                  </div>
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <img src="assets/img/harun.jpg" width="75%" class="rounded mx-auto d-block" alt="">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Member Card 4 -->
-              <div class="col-xl-4 col-md-4 mb-4">
-                <div class="card border-left-seagreen shadow h-100">
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h5 class="m-0 font-weight-bold text-blue">Reza Syahputra</h5>
-                  </div>
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <img src="assets/img/reza.jpg" width="75%" class="rounded mx-auto d-block" alt="">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Member Card 5 -->
-              <div class="col-xl-4 col-md-4 mb-4">
-                <div class="card border-left-seagreen shadow h-100">
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h5 class="m-0 font-weight-bold text-blue">M. Najmi Faisal</h5>
-                  </div>
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <img src="assets/img/bibin.jpg" width="75%" class="rounded mx-auto d-block" alt="">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Member Card 6 -->
-              <div class="col-xl-4 col-md-4 mb-4">
-                <div class="card border-left-seagreen shadow h-100">
-                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h5 class="m-0 font-weight-bold text-blue">=== It's Us! ===</h5>
-                  </div>
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <img src="assets/img/us.jpg" width="85%" class="rounded mx-auto d-block" alt="">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <!-- /.container-fluid -->
           </div>
-      </div>
-      <!-- End of Main Content -->
+          <!-- /.container-fluid -->
 
-<!-- Footer -->
-<footer class="sticky-footer bg-white">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Copyright &copy; WIZLAND 2019</span>
         </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Your Website 2019</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+
+      </div>
+      <!-- End of Content Wrapper -->
+
     </div>
-</footer>
-<!-- End of Footer -->
+    <!-- End of Page Wrapper -->
 
-</div>
-<!-- End of Content Wrapper -->
-
-</div>
-<!-- End of Page Wrapper -->
-
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -538,7 +651,7 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn bg-navy text-white" href="index.html">Logout</a>
+            <a class="btn btn-primary" href="login.html">Logout</a>
           </div>
         </div>
       </div>
@@ -554,8 +667,12 @@
     <!-- Custom scripts for all pages-->
     <script src="assets/js/sb-admin-2.min.js"></script>
 
+    <!-- Page level plugins -->
+    <script src="assets/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
     <!-- Page level custom scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="assets/js/demo/datatables-demo.js"></script>
 
   </body>
 
