@@ -32,13 +32,13 @@ var ctx = document.getElementById("myBarChart");
 var myBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
-    labels: ["01", "02", "03", "04", "05", "", "", "", "", ""],
+    labels: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"],
     datasets: [{
       label: "Transactions",
       backgroundColor: "#2178AE",
       hoverBackgroundColor: "#1b4973",
       borderColor: "#2178AE",
-      data: [30, 20, 40, 10, 50],
+      data: [30, 20, 40, 10, 50, 35, 25, 30, 40, 20],
     }],
   },
   options: {
